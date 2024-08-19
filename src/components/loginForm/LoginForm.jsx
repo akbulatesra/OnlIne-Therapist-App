@@ -36,12 +36,12 @@ const LoginForm = () => {
   };
 
   const styles = {
-    form: 'flex flex-col gap-8 shadow-xl h-60 justify-center items-center',
-    input: 'w-3/4 h-1/5 border-2 border-gray-200 p-2',
+    form: 'flex flex-col gap-8 shadow-xl justify-center items-center pb-20 py-20 mb-10 px-10',
+    input: 'w-full h-auto border-2 border-gray-200 px-2 py-4',
     loginButton:
-      'w-1/4 h-8 rounded text-lg sm:text-base font-medium shadow-md bg-cyan-400',
+      'w-full py-2 rounded text-lg sm:text-base font-medium shadow-md bg-cyan-400',
     signupButton:
-      'w-1/4 h-8 rounded text-lg sm:text-base font-medium shadow-md border-2 border-cyan-400 text-cyan-400',
+      'w-full py-2 rounded text-lg sm:text-base font-medium shadow-md border-2 border-cyan-400 text-cyan-400',
   };
 
   return (
@@ -70,7 +70,7 @@ const LoginForm = () => {
             {t('wrong')}
           </p>
         ) : null}
-        <div className="flex gap-5 w-full justify-center">
+        <div className="flex gap-8 w-full justify-center">
           <button
             data-testid="loginButton"
             className={`${styles.loginButton}`}
@@ -80,7 +80,7 @@ const LoginForm = () => {
             {t('login2')}
           </button>
           <button className={`${styles.signupButton}`} type="button">
-            <NavLink to="/signup">{t('singup')}</NavLink>
+            <NavLink to="/signup">{t('signup')}</NavLink>
           </button>
         </div>
       </form>

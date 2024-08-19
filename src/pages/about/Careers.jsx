@@ -12,14 +12,14 @@ const Careers = () => {
   };
   const { t } = useTranslation();
   return (
-    <div className=" font-poppins flex flex-col items-center ">
-      <div className=" flex flex-col items-center my-10 w-9/12">
+    <div className=" font-poppins flex flex-col items-center py-8">
+      <div className=" flex flex-col items-center lg:px-32 my-8 px-8">
         <div className=" self-start">
           <h1 className=" font-normal text-4xl mb-1">{t('careersTitle')}</h1>
           <p className="opacity-50 text-xl">{t('careersText1')}</p>
         </div>
 
-        <p className=" text-[#424A4F] w-full text-lg my-24 text-justify ">
+        <p className=" text-[#424A4F] w-full text-lg my-12 text-justify ">
           {t('careersText2')}
         </p>
 
@@ -35,8 +35,8 @@ const Careers = () => {
         </div>
       </div>
 
-      <div className=" bg-[#FEE89E] mt-24 mb-5 flex flex-col items-center">
-        <div className="flex flex-col w-9/12 py-3">
+      <div className=" bg-[#FEE89E] flex flex-col items-center lg:px-32 my-8 px-8">
+        <div className="flex flex-col py-8">
           <h1 className="text-[#424A4F] text-4xl mb-1">{t('hiringTitle')}</h1>
           <p className="text-[#424A4F] text-lg text-justify ">
             {t('hiringText')}
@@ -44,10 +44,10 @@ const Careers = () => {
         </div>
       </div>
 
-      <div id="car" className=" flex flex-col items-center my-10 w-9/12">
+      <div id="car" className=" flex flex-col items-center lg:px-32 my-8 px-8">
         <div className=" self-start">
           <h1 className=" font-normal text-4xl mb-1">{t('positions')}</h1>
-          <p className="opacity-50 text-xl">{t('positionText')}</p>
+          <p className="opacity-50 text-xl mb-6">{t('positionText')}</p>
           {careerListingData.map((career) => (
             <CareerListings
               title={t(`${career.title}`)}

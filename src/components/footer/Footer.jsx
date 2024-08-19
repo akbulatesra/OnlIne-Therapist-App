@@ -8,20 +8,20 @@ const Footer = () => {
   return (
     <div
       data-testid="FooterTest"
-      className="grid  grid-flow-row  md:grid-flow-col  lg:grid-flow-col   sm:p-2 md:py-2 md:px-8  bg-[#FEE89E]  space-x-3 md:space-x-6 sm:w-auto sm:flex sm:flex-col sm:text-xl sm:space-x-0 max:h-sixteen  w-full"
+      className="md:grid md:grid-flow-col px-8 py-4 bg-[#FEE89E] md:space-x-3 w-auto flex flex-col text-xl space-x-0 max:h-sixteen md:w-full lg:px-32 lg:py-8 items-center"
     >
       <div>
-        <h3 className="pb-2  laptop:ml-20 text-3xl font-normal sm:ml-0 sm:text-xl ">
+        <h3 className="pb-2 text-3xl font-normal sm:ml-0 sm:text-xl ">
           {t('Subscribe')}
         </h3>
-        <p className="pb-2 laptop:ml-20 text-[#718096] font-normal sm:ml-0 ">
+        <p className="pb-2  text-[#718096] font-normal sm:ml-0 ">
           {t('subscribeText')}
         </p>
-        <Subscribe className="laptop:ml-20 sm:ml-0" />
+        <Subscribe className=" sm:ml-0" />
       </div>
-      <div className="sm:text-center">
-        <div className="pb-2  mt-8  md:ml-20  xl:ml-36  text-[#718096] text-xl inline-flex  space-x-3 md:space-x-6 sm:ml-0 sm:text-sm sm:mt-2 ">
-          <a href="/" src="Ho me">
+      <div className="md:text-center text-start mt-4 lg:mt-0">
+        <div className="text-[#718096] space-x-3 md:space-x-6 sm:mt-2 flex w-full justify-between lg:justify-evenly">
+          <a href="/" alt="Home">
             {t('home')}
           </a>
           <a href="Blogs"> {t('blogs')} </a>
@@ -33,7 +33,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className=" ml-40 md:ml-44  xl:ml-48 flex space-x-4 md:space-x-8  sm:flex sm:justify-center sm:ml-0 ">
+        <div className="mt-8 flex space-x-4 md:space-x-8 justify-center sm:ml-0">
           <BsTwitter style={{ fontSize: '25px' }} />
           <BsInstagram style={{ fontSize: '25px' }} />
           <BsFacebook style={{ fontSize: '25px' }} />

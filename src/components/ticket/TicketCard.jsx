@@ -11,14 +11,14 @@ function TicketCard({ ticketNumber, ticketPrice }) {
     navigate('/buy-ticket', { state: { ticket: item, price: ticketPrice } });
   };
   return (
-    <div className="flex-col-4   tablet:w-80 tablet:h-80 w-40 h-40 pt-6 tablet:pt-16 tablet:space-y-4 space-y-2 tablet:mt-4  shadow-2xl rounded-lg align-start text-center">
+    <div className="px-4 lg:px-8 py-6 lg:py-14 lg:space-y-3 space-y-2 lg:mt-4 shadow-[0px_4px_12px_4px_rgba(178,171,171,0.25)] rounded-lg align-start text-center lg:w-100 w-5/6 mx-auto sm:w-full">
       <div>
-        <h1 className="text-2xl tablet:text-5xl ">
+        <h1 className="text-2xl lg:text-4xl ">
           {ticketNumber} {t('Tickets')}
         </h1>
       </div>
       <div>
-        <span className="text-xl tablet:text-3xl text-[#0000008a]">
+        <span className="text-xl lg:text-3xl text-[#0000008a]">
           {ticketPrice}$
         </span>
       </div>
@@ -27,7 +27,7 @@ function TicketCard({ ticketNumber, ticketPrice }) {
           onClick={() =>
             firestoreObject ? handleNavigate(ticketNumber) : navigate('/login')
           }
-          className="uppercase tablet:h-16 tablet:w-52 w-26 h-8 self-center rounded-md bg-[#2DD3E3] hover:bg-[#3E64E9] hover:text-neutral-100 text-md px-2 tablet:text-2xl text-center tablet:leading-9 text-black "
+          className="uppercase py-2 px-4 self-center rounded-md bg-[#2DD3E3] hover:bg-[#3E64E9] hover:text-neutral-100 text-md lg:text-2xl text-center lg:leading-9 text-black"
           type="button"
         >
           {t('Purchase')}
