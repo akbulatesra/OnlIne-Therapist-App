@@ -28,7 +28,7 @@ function RecommendBlog({ clippedId }) {
     ));
 
   return (
-    <div className="py-[5%] text-3xl sm:text-lg">
+    <div className="py-[5%] lg:text-3xl text-lg">
       <h1 className="py-[3%]">{t('Recommended')}</h1>
       <div className="flex space-x-[2%] pb-[3%]">{recommends}</div>
     </div>

@@ -12,19 +12,19 @@ const TeamM = () => {
   return (
     <div
       data-testid="TeamM"
-      className=" font-poppins flex flex-col items-center max:h-middle justify-center"
+      className="font-poppins flex flex-col justify-center lg:px-32 lg:py-16 p-8 pt-14"
     >
-      <div className=" flex flex-col items-center my-10 w-2/3 lg:w-5/6">
+      <div className=" flex flex-col my-4">
         <div className=" self-start">
-          <h1 className="text-5xl sm:text-3xl">{t('teamTitle')}</h1>
-          <p className="text-3xl sm:text-xl leading-10 mt-24 sm:mt-16 text-gray-700">
+          <h1 className="lg:text-5xl text-3xl">{t('teamTitle')}</h1>
+          <p className="lg:text-3xl text-xl leading-10 lg:mt-24 mt-16 text-gray-700">
             {t('meat')}
           </p>
         </div>
       </div>
 
-      <div className="mt-32 mb-10 mx-8 flex flex-wrap justify-evenly gap-8 items-center">
-        <div className="inline-flex flex-col items-center justify-end w-44 pt-0.5 pb-16 bg-[#EAF8F9] rounded-3xl">
+      <div className="mt-4 mb-10 flex flex-wrap justify-between gap-8 items-center">
+        <div className="inline-flex flex-col items-center justify-end w-56 lg:w-44 pt-0.5 pb-16 bg-[#EAF8F9] rounded-3xl">
           <img
             className="w-full rounded-tl-3xl rounded-tr-3xl"
             src={nadim}
@@ -64,7 +64,7 @@ const TeamM = () => {
             </a>
           </div>
         </div>
-        <div className="inline-flex flex-col items-center justify-end w-44 pt-0.5 pb-16 bg-[#EAF8F9] rounded-3xl">
+        <div className="inline-flex flex-col items-center justify-end w-56 lg:w-44 pt-0.5 pb-16 bg-[#EAF8F9] rounded-3xl">
           <img
             className="w-full rounded-tl-3xl rounded-tr-3xl"
             src={esra}
@@ -104,7 +104,7 @@ const TeamM = () => {
             </a>
           </div>
         </div>
-        <div className="inline-flex flex-col items-center justify-end w-44 pt-0.5 pb-16 bg-[#EAF8F9] rounded-3xl">
+        <div className="inline-flex flex-col items-center justify-end w-56 lg:w-44 pt-0.5 pb-16 bg-[#EAF8F9] rounded-3xl">
           <img
             className="w-full rounded-tl-3xl rounded-tr-3xl"
             src={hadi}
@@ -144,7 +144,7 @@ const TeamM = () => {
             </a>
           </div>
         </div>
-        <div className="inline-flex flex-col items-center justify-end w-44 pt-0.5 pb-16 bg-[#EAF8F9] rounded-3xl">
+        <div className="inline-flex flex-col items-center justify-end w-56 lg:w-44 pt-0.5 pb-16 bg-[#EAF8F9] rounded-3xl mx-auto lg:mx-0">
           <img
             className="w-full rounded-tl-3xl rounded-tr-3xl"
             src={pelin}
@@ -184,7 +184,7 @@ const TeamM = () => {
             </a>
           </div>
         </div>
-        <div className="inline-flex flex-col items-center justify-end w-44 pt-0.5 pb-16 bg-[#EAF8F9] rounded-3xl">
+        <div className="inline-flex flex-col items-center justify-end w-56 lg:w-44 pt-0.5 pb-16 bg-[#EAF8F9] rounded-3xl mx-auto lg:mx-0">
           <img
             className="w-full rounded-tl-3xl rounded-tr-3xl"
             src={ysf}
@@ -225,7 +225,7 @@ const TeamM = () => {
           </div>
         </div>
       </div>
-      <div className="inline-flex flex-col items-center justify-end w-44 pt-0.5 pb-16 bg-[#EAF8F9] rounded-3xl">
+      <div className="inline-flex flex-col items-center justify-end w-56 lg:w-44 pt-0.5 pb-16 bg-[#EAF8F9] rounded-3xl mx-auto">
         <img
           className="w-full rounded-tl-3xl rounded-tr-3xl"
           src={mucver}

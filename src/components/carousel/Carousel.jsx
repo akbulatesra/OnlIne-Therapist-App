@@ -23,7 +23,6 @@ function Carousel() {
     return (
       <div key={blog.id}>
         <Link to={`/blogs/:${blog.id}`}>
-          {' '}
           <button className="mx-1" type="button" onClick={handleClick}>
             <img src={blog.image} alt={blog.title} />
           </button>
@@ -57,18 +56,18 @@ function Carousel() {
   };
 
   return (
-    <div className="flex flex-col justify-center bg-[#EAF8F9] font-poppins ">
-      <h1 className="text-xl uppercase font-semibold tablet:text-5xl tablet: py-2 laptop:pl-28 laptop:py-16">
+    <div className="flex flex-col justify-center bg-[#EAF8F9] font-poppins lg:px-32 lg:py-16 px-4 py-8">
+      <h1 className="lg:text-5xl text-3xl text-center lg:text-start uppercase font-medium mb-10">
         {t('recend')}
       </h1>
-      <div className="flex flex-row justify-center tablet:pb-10 laptop: pb-28">
+      <div className="flex flex-row">
         <div className="self-center">
           <button onClick={sliderRef?.slickPrev} type="button">
             <img src={previous} alt="previous button" />
           </button>
         </div>
 
-        <div className="flex flex-col w-5/6 m-1 tablet:m-4">
+        <div className="flex flex-col lg:w-11/12 w-5/6 lg:mx-6 mx-2">
           <div data-testid="blogImage">
             <Slider ref={setSliderRef} {...settings}>
               {recentBlogs}

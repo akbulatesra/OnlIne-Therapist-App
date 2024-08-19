@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
@@ -38,20 +40,20 @@ const Navbar = ({ lang, setLang }) => {
     setLang(event.target.value);
   }
   const styles = {
-    li: 'text-lg hover:text-blue-300 sm:text-base',
-    aboutLi: 'border-b-2 border-b-slate-300 hover:text-blue-300 sm:border-0 ',
-    burger: 'text-2xl cursor-pointer mr-6 hidden sm:block',
+    li: 'md:text-lg hover:text-blue-300 text-base w-max ml-auto',
+    aboutLi:
+      'md:border-b-2 md:border-b-slate-300 hover:text-blue-300 border-0 ',
+    burger: 'text-2xl cursor-pointer mr-6 md:hidden block',
     dropdownStyle:
-      'absolute mt-6 bg-[#EAF8F9] px-2 text-center shadow  sm:px-0 sm:mt-0 sm:static sm:visible sm:shadow-none sm:text-start sm:ml-4',
+      'md:absolute md:mt-6 bg-[#EAF8F9] md:px-2 md:text-center md:shadow px-0 mt-0 static visible shadow-none text-start ml-4 md:ml-0',
   };
   return (
-    <div className="768:h-eight">
+    <div>
       <nav
         data-testid="currentUser"
-        className=" fixed w-full flex justify-between font-poppins bg-[#EAF8F9] items-center pt-1 sm:flex-col sm:items-start pb-1 shadow 768:h-eight z-10"
+        className="fixed w-full flex md:flex-row justify-center font-poppins bg-[#EAF8F9] md:items-center flex-col items-start shadow z-10 py-4"
       >
-        <div className="sm:w-full sm:justify-between sm:flex sm:items-center">
-          {' '}
+        <div className="flex items-center justify-between w-full">
           <div className="flex gap-2 ml-5 items-center">
             <img className="h-[2.5rem]" src={logoImg} alt="Logo" />
             <h1 className="text-2xl font-medium">{t('healing')}</h1>
@@ -70,38 +72,36 @@ const Navbar = ({ lang, setLang }) => {
         </div>
 
         <ul
-          className={`flex gap-6 items-center mr-8 transition-all duration-500 ease-in  ${
-            burgerDropdown
-              ? 'sm:flex-col sm:mr-0 sm:gap-1 sm:ml-7 sm:items-start '
-              : 'sm:hidden'
+          className={`md:flex gap-6 items-center mr-8 transition-all duration-500 ease-in  ${
+            burgerDropdown ? 'flex-col ml-auto text-end' : 'hidden'
           } `}
         >
           <li
             className={`${styles.li} ${
               location.pathname === '/' ? 'text-blue-300' : null
-            }`}
+            } ml-auto`}
           >
             <NavLink to="/">{t('home')}</NavLink>
           </li>
           <li
             className={`${styles.li} ${
               location.pathname === '/blogs' ? ' text-blue-300' : null
-            } `}
+            } ml-auto`}
           >
             <NavLink to="blogs/:1">{t('blogs')}</NavLink>
           </li>
           <li
-            className="text-lg flex flex-col sm:text-sm "
+            className="md:text-lg flex flex-col text-base"
             onMouseEnter={() => setAboutDropdown(true)}
             onMouseLeave={() => setAboutDropdown(false)}
           >
-            <div className="flex items-center">
+            <div className="flex items-center justify-end relative">
               {t('about')} <MdOutlineArrowDropDown />
             </div>
 
             <ul
-              className={` absolute mt-6 bg-[#EAF8F9] px-2 text-center shadow  sm:px-0 sm:mt-0 sm:static sm:visible sm:shadow-none sm:text-start sm:ml-4  ${
-                aboutDropdown ? 'visible' : 'invisible'
+              className={`absolute sm:right-6 lg:right-auto md:mt-6 bg-[#EAF8F9] md:px-2 md:text-center md:shadow px-0 mt-0 shadow-none text-end ml-4 md:ml-0 ${
+                aboutDropdown ? 'block' : 'hidden'
               }`}
             >
               <li
@@ -151,13 +151,12 @@ const Navbar = ({ lang, setLang }) => {
               onMouseEnter={() => setuserDropdown(true)}
               onMouseLeave={() => setuserDropdown(false)}
             >
-              {' '}
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 relative ml-auto">
                 {firestoreObject.name} <FaRegUserCircle />
               </div>
               <ul
-                className={` absolute mt-6 bg-[#EAF8F9] px-2 text-center shadow sm:px-0 sm:mt-0 sm:static sm:visible sm:shadow-none sm:text-start sm:ml-4  ${
-                  userDropdown ? 'visible' : 'invisible'
+                className={`absolute right-6 w-max md:mt-6 bg-[#EAF8F9] md:px-2 md:text-center md:shadow px-0 mt-0 shadow-none text-end ml-4 md:ml-0 ${
+                  userDropdown ? 'block' : 'hidden'
                 }`}
               >
                 <li className={styles.aboutLi}>
@@ -175,7 +174,6 @@ const Navbar = ({ lang, setLang }) => {
                   )}
                 </li>
                 <li>
-                  {' '}
                   <button
                     className=" hover:text-red-700"
                     type="button"
@@ -187,7 +185,7 @@ const Navbar = ({ lang, setLang }) => {
               </ul>
             </li>
           ) : (
-            <li className="text-lg bg-cyan-400 py-1 px-3 rounded sm:text-base">
+            <li className="md:text-lg bg-cyan-400 py-1 px-3 rounded text-base w-max">
               <NavLink to="login">{t('login')}</NavLink>
             </li>
           )}

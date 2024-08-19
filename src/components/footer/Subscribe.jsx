@@ -33,12 +33,12 @@ function Subscribe() {
 
   return (
     <form
-      className="laptop:ml-20  w-[15.2rem] h-[2.5rem]  flex  border-2 border-[#718096]  rounded box-border  flex-center sm:ml-0 "
+      className="flex border-2 border-[#718096]  rounded box-border  flex-center w-fit"
       onSubmit={handleChange}
       data-testid="SubscribeTest"
     >
       <input
-        className="  w-[15rem] h-[2.25rem] border flex border-hidden   rounded-sm box-border text-[#718096] text-md "
+        className="border flex border-hidden p-1  rounded-sm box-border text-[#718096] text-md "
         name="name"
         data-testid="Subscribe"
         placeholder={t('EnterEmail')}
@@ -48,14 +48,14 @@ function Subscribe() {
       />
 
       <button
-        className=" bg-[#2DD3E3] hover:bg-[#27B2C4] h-[2.27rem] w-[6rem] max-w-[8rem]  border-l-2  rounded-sm-x-2 rounded-r-sm box-border   border-[#718096]  color-[#718096]   "
+        className="bg-[#2DD3E3] hover:bg-[#27B2C4] border-l-2 py-1 px-2 rounded-sm-x-2 rounded-r-sm box-border border-[#718096]  color-[#718096]"
         type="submit"
         name="submit"
         value="Submit"
         onSubmit={handleSubmit}
         data-testid="SubmitTest"
       >
-        <RiSendPlaneFill className="flex-auto m-2" />
+        <RiSendPlaneFill />
       </button>
       {error && <p>{error}</p>}
     </form>

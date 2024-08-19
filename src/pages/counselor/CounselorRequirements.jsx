@@ -8,7 +8,7 @@ const CounselorRequirements = () => {
   return (
     <div className="max:h-middle">
       <img
-        className="laptop:relative laptop:float-right -z-10 laptop:top-24 laptop:mr-16 lg:flex lg:flex-col lg:mx-auto sm:mt-20 sm:w-2/3 "
+        className="lg:relative lg:float-right -z-10 lg:top-24 lg:mr-16 lg:flex lg:flex-col lg:mx-auto sm:mt-20 sm:w-2/3 "
         src={frame}
         alt="illustration"
       />

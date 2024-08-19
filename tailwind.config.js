@@ -8,16 +8,11 @@ module.exports = {
         poppins: ['Poppins', 'sans-serif'],
       },
       screens: {
-        xsm: { max: '425px' },
-        sm: { max: '639px' },
-        tablet2: { max: '768px' },
-        lg: { max: '1024px' },
-        tablet: '640px',
-        laptop: '1024px',
-
-        max: '1500px',
-        425: '425px',
-        768: '768px',
+        sm: { min: '640px' },
+        md: { min: '768px' },
+        lg: { min: '1024px' },
+        xl: { min: '1280px' },
+        xxl: { min: '1536px' },
       },
       colors: {
         lightBlack: 'rgba(0, 0, 0, 0.5)',
