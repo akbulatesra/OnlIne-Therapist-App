@@ -36,7 +36,7 @@ const LoginForm = () => {
   };
 
   const styles = {
-    form: 'flex flex-col gap-8 shadow-xl justify-center items-center pb-20 py-20 mb-10 px-10',
+    form: 'flex flex-col gap-8 shadow-xl justify-center items-center lg:py-20 mb-10 lg:px-10 px-5 py-10',
     input: 'w-full h-auto border-2 border-gray-200 px-2 py-4',
     loginButton:
       'w-full py-2 rounded text-lg sm:text-base font-medium shadow-md bg-cyan-400',
@@ -45,7 +45,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div data-testid="loginForm" className="w-1/3 sm:w-10/12">
+    <div data-testid="loginForm" className="lg:w-1/3">
       <form className={`${styles.form}`}>
         <input
           className={`${styles.input} ${error ? 'border-red-300' : 'null'}`}
