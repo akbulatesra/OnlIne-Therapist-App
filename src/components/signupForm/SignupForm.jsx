@@ -51,7 +51,7 @@ const SignupForm = () => {
 
   return (
     <form data-testid="signup">
-      <div className="flex flex-col mt-10 px-10 py-5 rounded-md shadow-[0px_10px_16px_rgba(0,0,0,0.1)] tablet2:mt-10">
+      <div className="flex flex-col lg:mt-10 mt-4 px-10 py-5 rounded-md shadow-[0px_10px_16px_rgba(0,0,0,0.1)]">
         <section className="flex gap-5">
           <input
             type="text"
@@ -89,7 +89,7 @@ const SignupForm = () => {
           title={t('must5')}
           className="rounded-md mb-3 h-12 pl-2 border border-solid border-[#D1DBE3]"
         />
-        <section className="flex gap-5 425:flex-col 425:gap-0 tablet2:flex-col tablet2:gap-0">
+        <section className="flex gap-5 ">
           <input
             type="password"
             value={userPassword}
@@ -112,8 +112,8 @@ const SignupForm = () => {
           />
         </section>
 
-        <div className="flex gap-5">
-          <p className="rounded-md mb-3 h-12 w-2/5 text-center flex justify-center items-center	">
+        <div className="flex lg:gap-5 lg:flex-row flex-col">
+          <p className="rounded-md lg:mb-3 h-12 lg:w-2/5 lg:text-center flex lg:justify-center items-center	">
             {t('Birth Date')}
           </p>
           <input
@@ -121,33 +121,33 @@ const SignupForm = () => {
             value={userBirthDay}
             onChange={handleState(setUserBirthDay)}
             placeholder={t('dd')}
-            className="rounded-md mb-3 h-12 w-1/5 pl-2 425:text-center 425:pl-0 border border-solid border-[#D1DBE3] tablet2:text-xs tablet2:pl-0 tablet2:w-2/3"
+            className="rounded-md mb-3 h-12 lg:w-1/5 pl-2 425:text-center 425:pl-0 border border-solid border-[#D1DBE3] tablet2:text-xs tablet2:pl-0 tablet2:w-2/3"
           />
           <input
             type="text"
             value={userBirthMonth}
             onChange={handleState(setUserBirthMonth)}
             placeholder={t('mm')}
-            className="rounded-md mb-3 h-12 w-1/5 pl-2 425:text-center 425:pl-0 border border-solid border-[#D1DBE3] tablet2:text-xs tablet2:pl-0 tablet2:w-2/3"
+            className="rounded-md mb-3 h-12 lg:w-1/5 pl-2 425:text-center 425:pl-0 border border-solid border-[#D1DBE3] tablet2:text-xs tablet2:pl-0 tablet2:w-2/3"
           />
           <input
             type="text"
             value={userBirthYear}
             onChange={handleState(setUserBirthYear)}
             placeholder={t('yy')}
-            className="rounded-md mb-3 h-12 w-2/5 pl-2 425:text-center 425:pl-0  border border-solid border-[#D1DBE3] tablet2:text-xs tablet2:pl-0 tablet2:w-full"
+            className="rounded-md mb-3 h-12 lg:w-2/5 pl-2 425:text-center 425:pl-0  border border-solid border-[#D1DBE3] tablet2:text-xs tablet2:pl-0 tablet2:w-full"
           />
         </div>
-        <section className="flex justify-center gap-10 font-medium mt-5">
+        <section className="flex justify-center lg:gap-10 font-medium mt-5 gap-4">
           <button
             type="submit"
-            className="h-16 w-1/3	rounded-md border border-solid border-[#2DD3E3] text-2xl text-[#2DD3E3] 425:text-xl tablet2:text-xl tablet2:w-2/3"
+            className="h-16 lg:w-1/3 w-full	rounded-md border border-solid border-[#2DD3E3] text-2xl text-[#2DD3E3] 425:text-xl tablet2:text-xl tablet2:w-2/3"
           >
             <NavLink to="/login">{t('login2')}</NavLink>
           </button>
           <button
             type="submit"
-            className="h-16	w-1/3	rounded-md bg-[#2DD3E3] text-2xl text-black shadow-[0px_7px_20px_rgba(0,0,0,0.2)] 425:text-xl tablet2:text-xl tablet2:w-2/3"
+            className="h-16	lg:w-1/3 w-full	rounded-md bg-[#2DD3E3] text-2xl text-black shadow-[0px_7px_20px_rgba(0,0,0,0.2)] 425:text-xl tablet2:text-xl tablet2:w-2/3"
             onClick={
               userPassword === userConfirmPassword &&
               userEmail === userConfirmEmail

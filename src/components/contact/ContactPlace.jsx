@@ -4,8 +4,8 @@ import React from 'react';
 
 function ContactPlace() {
   return (
-    <div className=" w-full h-fit  font-poppins rounded-[35px] text-2xl sm:text-sm bg-[#eaf8f9]">
-      <div className="p-[6%]">
+    <div className=" w-full h-fit font-poppins rounded-[35px] lg:text-2xl text-sm bg-[#eaf8f9]">
+      <div className="md:p-[6%] p-4">
         <h6>Find us at: </h6>
         <p className=" text-slate-500">
           Nergiz Plaza <br />
